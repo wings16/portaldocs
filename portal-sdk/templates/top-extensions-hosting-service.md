@@ -87,17 +87,19 @@ The zip file generated during the build should be named as `<BUILD_VERSION>.zip`
 
 ##### For extensions using `CoreXT` 
 
-Executing following command will prompt the version number
+CoreXT stores the build number in a file at `.config/.inc/versions.xml`.
 
+For example, the versions.xml in my repo has:
+```xml
+<root>
+  <versions>
+    <version name="filever" value="1.0.157.0" />
+  </versions>
+</root>
 ```
-$>set CURRENT_BUILD_VERSION
-```
+So the version will be `1.0.157.0`.
+For more information about versions in CoreXT, see [their docs](https://microsoft.sharepoint.com/teams/corext/LivingDocs/Versioning.aspx).
 
-In my case this prompts:
-
-```
-CURRENT_BUILD_VERSION=5.0.0.440
-```
 
 ##### For extensions not using `CoreXT`
 
